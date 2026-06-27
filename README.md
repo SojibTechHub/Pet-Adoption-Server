@@ -4,8 +4,8 @@
 Backend REST API for the Pet Adoption Platform. Built with Express.js, MongoDB, JWT authentication, and Passport Google OAuth.
 
 ## Live URL
-- Server: https://your-server-url.onrender.com
-- Client: https://your-client-url.vercel.app
+- Server: https://pet-adoption-server-6v5r.onrender.com
+- Client: https://pet-adoption-client-rho-jet.vercel.app
 
 ## Features
 - JWT authentication with HTTPOnly cookies
