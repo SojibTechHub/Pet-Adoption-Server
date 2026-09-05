@@ -1,24 +1,78 @@
-# Pet Adoption Platform - Server
+<div align="center">
 
-## Purpose
-Backend REST API for the Pet Adoption Platform. Handles authentication, pet CRUD, and adoption request workflow with secure MongoDB integration.
+# 🐾 Pet Adoption Server
 
-## Live URL
-- **Server:** https://pet-adoption-server-6v5r.onrender.com
-- **Client:** https://pet-adoption-client-rho-jet.vercel.app
+### *Backend API for Pet Adoption Platform*
 
-## Features
-- User authentication with JWT stored in HTTPOnly cookies
-- Google OAuth 2.0 login via Passport.js
-- Pet CRUD operations with ImgBB image upload support
-- Adoption request system with approve/reject workflow
-- MongoDB queries using `$regex` (search) and `$in` (species filter)
-- Seed data route for populating demo pets
-- Adoption control (owner cannot adopt own pet, only one approval per pet)
-- Environment variables for secure credential management
+![Node.js](https://img.shields.io/badge/Node.js-20-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-8-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Google OAuth](https://img.shields.io/badge/Google_OAuth-2.0-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
-## NPM Packages
-- express, mongoose, cors, dotenv, cookie-parser
-- bcryptjs, jsonwebtoken
-- passport, passport-google-oauth20
-- nodemon (dev dependency)
+[![Live API](https://img.shields.io/badge/Live_API-Render-4D6E4F?style=for-the-badge&logo=render&logoColor=white)](https://pet-adoption-server-6v5r.onrender.com)
+
+</div>
+
+---
+
+## 📖 Overview
+
+Backend REST API for the Pet Adoption platform. Handles JWT authentication with HTTPOnly cookies, Google OAuth, pet CRUD with ImgBB image upload, and adoption request workflow.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🔐 **JWT Auth** | HTTPOnly cookie-based authentication |
+| 🔑 **Google OAuth** | Passport.js Google 2.0 integration |
+| 🐕 **Pet CRUD** | Create, read, update, delete pets |
+| 🖼️ **Image Upload** | ImgBB image hosting |
+| 📋 **Adoption Workflow** | Submit, approve, reject requests |
+| 🔍 **Search & Filter** | MongoDB $regex and $in queries |
+| 🌱 **Database Seeder** | Pre-populated demo data |
+
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| POST | `/api/auth/register` | No | Register user |
+| POST | `/api/auth/login` | No | Login user |
+| GET | `/api/auth/google` | No | Google OAuth |
+| GET | `/api/pets` | No | Get all pets (search/filter) |
+| POST | `/api/pets` | Yes | Create pet |
+| PUT | `/api/pets/:id` | Yes | Update pet |
+| DELETE | `/api/pets/:id` | Yes | Delete pet |
+| POST | `/api/adoptions` | Yes | Submit adoption request |
+| PUT | `/api/adoptions/:id` | Yes | Update adoption status |
+
+---
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/sojibahmedshorif25-ai/Pet-Adoption-Server.git
+npm install
+cp .env.example .env
+npm run seed    # Seed database
+npm run dev     # Start server
+```
+
+---
+
+## 👨‍💻 Author
+
+**Sojib Ahmed**
+
+[![GitHub](https://img.shields.io/badge/GitHub-sojibahmedshorif25--ai-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sojibahmedshorif25-ai)
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if you find it impressive!**
+
+</div>
